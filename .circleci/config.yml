@@ -6,4 +6,4 @@ workflows:
     jobs:
       - cypress/run:
           package-manager: 'yarn'
-          cypress-command: 'cd cypressTest && npx cypress run'
+          cypress-command: 'yarn cy:run'
