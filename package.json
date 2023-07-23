@@ -8,8 +8,8 @@
   },
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run",
-    "combine-reports": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/report.json",
-    "generate-report": "yarn combine-reports && npx marge mochawesome-report/report.json -f report -o mochawesome-report -- inline"
+    "cy:run": "npx cypress run && yarn generate-report",
+    "combine-reports": "mochawesome-merge mochawesome-report/*.json > cypress/screenshots/report.json",
+    "generate-report": "yarn combine-reports && npx marge cypress/screenshots/report.json -f report -o mochawesome-report -- inline"
   }
 }
