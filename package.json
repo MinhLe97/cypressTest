@@ -9,7 +9,7 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run && yarn generate-report",
-    "combine-reports": "mochawesome-merge mochawesome-report/*.json > cypress/screenshots/report.json",
-    "generate-report": "yarn combine-reports && npx marge cypress/screenshots/report.json -f report -o mochawesome-report -- inline"
+    "combine-reports": "mochawesome-merge ${PWD}/mochawesome-report/*.json > ${PWD}/cypress/screenshots/report.json",
+    "generate-report": "yarn combine-reports && npx marge ${PWD}/cypress/screenshots/report.json -f report -o ${PWD}/cypress/screenshots -- inline"
   }
 }
