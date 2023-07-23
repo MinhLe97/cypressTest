@@ -7,4 +7,4 @@ workflows:
       - cypress/run:
           package-manager: 'yarn'
           cypress-command: 'yarn cy:run'
-          store_artifacts: true
+          store-artifacts: true
