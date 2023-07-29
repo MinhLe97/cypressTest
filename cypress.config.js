@@ -5,7 +5,7 @@ module.exports = defineConfig({
   screenshotsFolder: "cypress/screenshots",
   reporter: "mochawesome",
   reporterOptions: {
-    overwrite: false,
+    overwrite: true,
     html: false,
     json: true
   },

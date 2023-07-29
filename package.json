@@ -10,6 +10,6 @@
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run ; yarn generate-report",
     "combine-reports": "mochawesome-merge ${PWD}/mochawesome-report/*.json > ${PWD}/cypress/screenshots/report.json",
-    "generate-report": "yarn combine-reports && npx marge ${PWD}/cypress/screenshots/report.json -f report -o ${PWD}/cypress/screenshots -- inline"
+    "generate-report": "npx marge ${PWD}/mochawesome-report/*.json -f report -o ${PWD}/mochawesome-report && cp ${PWD}/mochawesome-report/report.html ${PWD}/cypress/screenshots/report.html"
   }
 }
