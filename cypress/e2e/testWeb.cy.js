@@ -9,7 +9,7 @@ describe('Unsplash page', () => {
         cy.get('[type=submit]').click();
         cy.get('[itemprop="contentUrl"]').first().click();
         const url = cy.url();
-        cy.get('[data-test="photos-route"] [title="Like"]').click();
+        cy.get('[data-test="photos-route"] [title="Like"]').trigger("click");
         cy.visit('https://unsplash.com/@leminh1997/likes');
         cy.log('href: ', url);
         cy.get('[itemprop="contentUrl"]').invoke('attr', 'href').then(href => {
