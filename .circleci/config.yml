@@ -6,5 +6,5 @@ workflows:
     jobs:
       - cypress/run:
           package-manager: 'yarn'
-          cypress-command: 'yarn cy:run --record'
+          cypress-command: 'yarn cy:run'
           working-directory: '/home/circleci/project'
