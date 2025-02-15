@@ -3,13 +3,13 @@ exit_code=$?  # Capture the exit status of the last command
 echo "Cypress exit code: $exit_code"
 yarn generate-report
 
-if [[ $exit_code == 0 ]]; then
+if [ $exit_code == 0 ]; then
   result="✅ Success"
 else
   result="❌ Fail"
 fi
 
-echo $result
+echo $result" and exit with status "$exit_code
 
 curl -H "Content-Type: application/json" -X POST \
             -d '{
