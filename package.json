@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cypress": "^10.10.0",
+    "cypress": "^10.11.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.2.0",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run --exit ; yarn generate-report",
+    "cy:run": "./triggerCypress.sh",
     "combine-reports": "mochawesome-merge ${PWD}/mochawesome-report/*.json > ${PWD}/cypress/screenshots/report.json",
     "generate-report": "npx marge ${PWD}/mochawesome-report/*.json -f report -o ${PWD}/cypress/videos"
   }
