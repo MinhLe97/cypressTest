@@ -47,7 +47,7 @@ describe("template spec", () => {
       cy.visit("https://practice.expandtesting.com/shadowdom");
       cy.get('[id="my-btn"][type="button"]').invoke("text").then(
         (text) => {
-          expect(text).to.equal('This button is inside a Shadow DOM')
+          expect(text).to.equal('This button is inside a Shadow DOM.')
         }
       );
     });
