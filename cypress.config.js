@@ -9,6 +9,7 @@ module.exports = defineConfig({
     html: false,
     json: true
   },
+  includeShadowDom: true,
   e2e: {
     setupNodeEvents(on, config) {
       on('after:spec', (results) => {
